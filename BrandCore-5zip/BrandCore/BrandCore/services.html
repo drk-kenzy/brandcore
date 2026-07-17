@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Brandcore</title>
+<meta name="description" content="Découvrez les sept services de communication et relations publiques proposés par Brandcore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo-block" style="text-decoration:none;">
+      <div class="logo">Brand<span>core</span></div>
+      <div class="tagline">Agence de communication</div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="">Accueil</a>
+      <a href="apropos.html" class="">À propos</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="methode.html" class="">Approche</a>
+      <a href="contact.html" class="nav-cta">Contactez-nous</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+<section class="band alt" style="padding-top:150px;" id="services">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Nos services</span>
+      <h2>Ce que nous proposons</h2>
+      <p>Sept expertises complémentaires pour couvrir tout le cycle de communication de votre entreprise.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="service-icon orange">◆</div>
+        <h3>Image & réputation</h3>
+        <p>Nous pilotons la manière dont le public perçoit votre entreprise, sur la durée.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon navy">▣</div>
+        <h3>Promotion & publicité</h3>
+        <p>Campagnes réseaux sociaux, affiches et publicités pensées pour votre cible.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon orange">▲</div>
+        <h3>Acquisition clients</h3>
+        <p>Des stratégies concrètes pour transformer la visibilité en ventes.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon navy">●</div>
+        <h3>Relations médias</h3>
+        <p>Communiqués de presse, partenariats influenceurs, veille média.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon orange">◆</div>
+        <h3>Événementiel</h3>
+        <p>Lancements de produits, conférences et campagnes promotionnelles.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon navy">▣</div>
+        <h3>Gestion de crise</h3>
+        <p>Un plan et une équipe prêts à répondre à toute situation sensible.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon orange">▲</div>
+        <h3>Identité de marque</h3>
+        <p>Nom, logo, positionnement : une identité forte sur tous vos canaux.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon navy">●</div>
+        <h3>Présence digitale</h3>
+        <p>Site web, réseaux sociaux et référencement pour exister en ligne.</p>
+      </div>
+    </div>
+    <div class="reveal" style="text-align:center; margin-top:50px;">
+      <a href="contact.html" class="btn btn-primary">Démarrer un projet →</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div>© 2026 Brandcore Agence. Tous droits réservés — Cotonou, Bénin</div>
+    <div class="socials">
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="Twitter">t</a>
+      <a href="#" aria-label="Instagram">i</a>
+      <a href="#" aria-label="LinkedIn">in</a>
+    </div>
+  </div>
+</footer>
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('show'); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

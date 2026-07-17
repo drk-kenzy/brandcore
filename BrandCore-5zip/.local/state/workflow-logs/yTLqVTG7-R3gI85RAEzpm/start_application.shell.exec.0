@@ -1,0 +1,51 @@
+Serving HTTP on 0.0.0.0 port 5000 (http://0.0.0.0:5000/) ...
+127.0.0.1 - - [16/Jul/2026 23:39:47] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:39:47] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:39:48] "GET /logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:39:50] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:39:50] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:39:50] "GET /logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:39:51] code 404, message File not found
+127.0.0.1 - - [16/Jul/2026 23:39:51] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [16/Jul/2026 23:40:08] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:40:08] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:40:08] "GET /logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:40:10] code 404, message File not found
+127.0.0.1 - - [16/Jul/2026 23:40:10] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [16/Jul/2026 23:41:56] "GET /contact.html HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:47:55] "GET /services.html HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:48:41] "GET /contact.html HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:48:46] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:48:58] "GET /apropos.html HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:50:26] "GET /apropos.html HTTP/1.1" 304 -
+127.0.0.1 - - [16/Jul/2026 23:50:45] "GET /services.html HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:50:52] "GET /contact.html HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:52:07] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:53:13] "GET /test_team.html HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:53:13] "GET /equipe.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:54:42] code 404, message File not found
+127.0.0.1 - - [16/Jul/2026 23:54:42] "GET /test_team.html HTTP/1.1" 404 -
+127.0.0.1 - - [16/Jul/2026 23:54:59] "GET /preview.html HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:54:59] "GET /equipe.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [16/Jul/2026 23:55:23] "GET /preview.html HTTP/1.1" 304 -
+127.0.0.1 - - [16/Jul/2026 23:55:23] "GET /equipe.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [16/Jul/2026 23:55:44] "GET /preview.html HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:55:49] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:56:27] "GET /preview.html HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:56:27] "GET /style.css?v=3 HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:56:27] "GET /equipe.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [16/Jul/2026 23:56:58] "GET /preview.html HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:56:58] "GET /style.css?v=4 HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:56:58] "GET /equipe.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [16/Jul/2026 23:57:48] "GET /services.html HTTP/1.1" 304 -
+127.0.0.1 - - [16/Jul/2026 23:58:10] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:58:11] "GET /equipe.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:58:23] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [16/Jul/2026 23:58:24] "GET /equipe.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [17/Jul/2026 00:01:01] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Jul/2026 00:01:01] "GET /equipe.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [17/Jul/2026 00:01:31] "GET /methode.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Jul/2026 00:01:40] "GET /apropos.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Jul/2026 00:02:30] "GET /apropos.html HTTP/1.1" 304 -
+127.0.0.1 - - [17/Jul/2026 00:02:33] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Jul/2026 00:03:00] "GET / HTTP/1.1" 200 -
