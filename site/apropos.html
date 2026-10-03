@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos — Brandcore</title>
+<meta name="description" content="Découvrez l'équipe Brandcore : trois pôles d'expertise réunis autour d'un même projet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo-block" style="text-decoration:none;">
+      <div class="logo">Brand<span>core</span></div>
+      <div class="tagline">Agence de communication</div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="">Accueil</a>
+      <a href="apropos.html" class="active">À propos</a>
+      <a href="services.html" class="">Services</a>
+      <a href="methode.html" class="">Approche</a>
+      <a href="contact.html" class="nav-cta">Contactez-nous</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+<section class="band alt" style="padding-top:150px;" id="equipe">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">L'équipe</span>
+      <h2>Trois pôles, une seule voix</h2>
+      <p>Chaque expertise couvre une partie du projet — technique, commerciale, créative — pour livrer un résultat cohérent de bout en bout.</p>
+    </div>
+    <div class="team-grid reveal">
+      <div class="team-card">
+        <span class="num">PÔLE 01</span>
+        <h3>Technique & sécurité</h3>
+        <p>Réseaux, mobilité et sécurité informatique.</p>
+        <ul>
+          <li>Infrastructure et hébergement du site</li>
+          <li>Sécurité des données clients</li>
+          <li>Outils numériques de l'agence</li>
+        </ul>
+      </div>
+      <div class="team-card">
+        <span class="num">PÔLE 02</span>
+        <h3>Commerce & e-business</h3>
+        <p>Commerce international et e-business.</p>
+        <ul>
+          <li>Stratégie commerciale et acquisition</li>
+          <li>Partenariats et contrats clients</li>
+          <li>Développement à l'international</li>
+        </ul>
+      </div>
+      <div class="team-card">
+        <span class="num">PÔLE 03</span>
+        <h3>Marketing & créatif</h3>
+        <p>Marketing et communication digitale.</p>
+        <ul>
+          <li>Campagnes publicitaires</li>
+          <li>Réseaux sociaux et branding</li>
+          <li>Étude de marché et personas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="split-left" id="apropos">
+  <div class="graphic-bg">
+    <svg viewBox="0 0 700 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect width="700" height="700" fill="#132A4E"/>
+      <polygon points="0,0 260,0 0,300" fill="#EFF0F2" opacity="0.9"/>
+      <polygon points="0,90 340,0 420,0 0,260" fill="#F2791D"/>
+      <polygon points="0,180 420,0 470,0 0,320" fill="#F7A159" opacity="0.85"/>
+    </svg>
+  </div>
+  <div class="about-card reveal">
+    <span class="eyebrow">À propos de nous</span>
+    <h2>Votre partenaire de confiance</h2>
+    <p>Trois pôles d'expertise réunis — technique, commercial et créatif — pour transformer vos idées en une image de marque forte et cohérente.</p>
+    <a href="methode.html" class="btn btn-orange">En savoir plus <span>→</span></a>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div>© 2026 Brandcore Agence. Tous droits réservés — Cotonou, Bénin</div>
+    <div class="socials">
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="Twitter">t</a>
+      <a href="#" aria-label="Instagram">i</a>
+      <a href="#" aria-label="LinkedIn">in</a>
+    </div>
+  </div>
+</footer>
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('show'); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

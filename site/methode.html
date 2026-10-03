@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notre méthode — Brandcore</title>
+<meta name="description" content="La méthode Brandcore en cinq étapes : diagnostic, création, diffusion, pilotage, protection.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo-block" style="text-decoration:none;">
+      <div class="logo">Brand<span>core</span></div>
+      <div class="tagline">Agence de communication</div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="">Accueil</a>
+      <a href="apropos.html" class="">À propos</a>
+      <a href="services.html" class="">Services</a>
+      <a href="methode.html" class="active">Approche</a>
+      <a href="contact.html" class="nav-cta">Contactez-nous</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+<section class="band" style="padding-top:150px;" id="methode">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Notre méthode</span>
+      <h2>Une marque se construit, elle ne s'improvise pas</h2>
+      <p>Chaque projet suit la même rigueur, du diagnostic au suivi des résultats.</p>
+    </div>
+    <div class="method-list reveal">
+      <div class="method-row">
+        <span class="step">Diagnostic</span>
+        <div><h4>Analyse & positionnement</h4><p>Étude SWOT, benchmark concurrentiel et définition des personas cibles.</p></div>
+        <div class="tools">SWOT · Benchmark · Persona</div>
+      </div>
+      <div class="method-row">
+        <span class="step">Création</span>
+        <div><h4>Contenu & identité</h4><p>Visuels, campagnes et supports pensés pour chaque canal.</p></div>
+        <div class="tools">Canva · Adobe · Réseaux sociaux</div>
+      </div>
+      <div class="method-row">
+        <span class="step">Diffusion</span>
+        <div><h4>Publicité & relations presse</h4><p>Achat média ciblé, communiqués de presse et partenariats créateurs.</p></div>
+        <div class="tools">Meta Ads · Google Ads · Mailchimp</div>
+      </div>
+      <div class="method-row">
+        <span class="step">Pilotage</span>
+        <div><h4>Suivi & ajustement</h4><p>Organisation des tâches et mesure continue des résultats.</p></div>
+        <div class="tools">Trello · Notion · Analytics</div>
+      </div>
+      <div class="method-row">
+        <span class="step">Protection</span>
+        <div><h4>Veille & gestion de crise</h4><p>Surveillance en temps réel et plan de réponse prêt à l'emploi.</p></div>
+        <div class="tools">Google Alerts · Mention</div>
+      </div>
+    </div>
+    <div class="reveal" style="text-align:center; margin-top:50px;">
+      <a href="apropos.html" class="btn btn-ghost">Découvrir l'équipe →</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div>© 2026 Brandcore Agence. Tous droits réservés — Cotonou, Bénin</div>
+    <div class="socials">
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="Twitter">t</a>
+      <a href="#" aria-label="Instagram">i</a>
+      <a href="#" aria-label="LinkedIn">in</a>
+    </div>
+  </div>
+</footer>
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('show'); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

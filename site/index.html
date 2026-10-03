@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brandcore — Agence de communication & relations publiques</title>
+<meta name="description" content="Brandcore, agence de communication et relations publiques basée à Cotonou. Stratégie, branding, réseaux sociaux, événementiel et gestion de crise.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo-block" style="text-decoration:none;">
+      <div class="logo">Brand<span>core</span></div>
+      <div class="tagline">Agence de communication</div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="services.html" class="">Services</a>
+      <a href="methode.html" class="">Approche</a>
+      <a href="apropos.html" class="">À propos</a>
+      <a href="contact.html" class="nav-cta">Contactez-nous</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+<section class="hero" id="accueil">
+  <div class="hero-flex">
+    <div class="hero-left">
+      <div class="hero-left-inner">
+        <div class="hero-eyebrow reveal">
+          <span class="dash"></span>
+          <span class="eyebrow" id="eyebrowText">Bienvenue chez Brandcore</span>
+        </div>
+        <h1 class="hero-title reveal" id="heroTitle">Des stratégies solides pour votre <em>réussite</em></h1>
+        <p class="hero-sub reveal" id="heroSub">Nous aidons les entreprises béninoises à se faire connaître grâce à des campagnes créatives, une image forte et une communication maîtrisée.</p>
+        <div class="hero-actions reveal">
+          <a href="services.html" class="btn btn-primary">Découvrir nos services <span>→</span></a>
+          <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-graphic-wrap">
+        <svg viewBox="0 0 620 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <rect width="620" height="700" fill="#EFF0F2"/>
+          <polygon points="230,0 620,0 620,700 70,700" fill="#132A4E"/>
+          <polygon points="330,0 400,0 140,700 70,700" fill="#E7E8EA"/>
+          <polygon points="400,0 470,0 210,700 140,700" fill="#F2791D"/>
+          <polygon points="470,0 500,0 240,700 210,700" fill="#F7A159"/>
+        </svg>
+      </div>
+      <button class="hero-arrow prev" id="prevArrow" aria-label="Précédent">‹</button>
+      <button class="hero-arrow next" id="nextArrow" aria-label="Suivant">›</button>
+    </div>
+  </div>
+</section>
+
+<section class="band alt">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Un aperçu</span>
+      <h2>Tout ce dont votre marque a besoin</h2>
+      <p>Découvrez nos services, notre méthode et l'équipe derrière Brandcore.</p>
+    </div>
+    <div class="services-grid reveal" style="grid-template-columns:repeat(3,1fr);">
+      <div class="service-card">
+        <div class="service-icon orange">◆</div>
+        <h3>Services</h3>
+        <p>Sept expertises pour construire, promouvoir et protéger votre image.</p>
+        <a href="services.html" class="btn btn-ghost" style="margin-top:6px;">Voir les services →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon navy">▣</div>
+        <h3>Notre méthode</h3>
+        <p>Une approche en cinq étapes, du diagnostic au suivi des résultats.</p>
+        <a href="methode.html" class="btn btn-ghost" style="margin-top:6px;">Voir la méthode →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon orange">▲</div>
+        <h3>L'équipe</h3>
+        <p>Trois pôles d'expertise réunis pour un projet cohérent de bout en bout.</p>
+        <a href="apropos.html" class="btn btn-ghost" style="margin-top:6px;">Voir l'équipe →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div>© 2026 Brandcore Agence. Tous droits réservés — Cotonou, Bénin</div>
+    <div class="socials">
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="Twitter">t</a>
+      <a href="#" aria-label="Instagram">i</a>
+      <a href="#" aria-label="LinkedIn">in</a>
+    </div>
+  </div>
+</footer>
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('show'); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+<script>
+  const slides = [
+    { eyebrow: "Bienvenue chez Brandcore", title: "Des stratégies solides pour votre <em>réussite</em>", sub: "Nous aidons les entreprises béninoises à se faire connaître grâce à des campagnes créatives, une image forte et une communication maîtrisée." },
+    { eyebrow: "Notre promesse", title: "Une image forte pour votre <em>croissance</em>", sub: "Du branding à la gestion de crise, nous couvrons tout le cycle de communication de votre entreprise." },
+    { eyebrow: "Notre équipe", title: "Trois expertises, un seul <em>objectif</em>", sub: "Technique, commerce et créatif réunis pour livrer des projets cohérents et efficaces." }
+  ];
+  let slideIndex = 0;
+  const eyebrowEl = document.getElementById('eyebrowText');
+  const titleEl = document.getElementById('heroTitle');
+  const subEl = document.getElementById('heroSub');
+  function showSlide(i){
+    const s = slides[(i + slides.length) % slides.length];
+    eyebrowEl.textContent = s.eyebrow;
+    titleEl.innerHTML = s.title;
+    subEl.textContent = s.sub;
+  }
+  document.getElementById('nextArrow').addEventListener('click', () => { slideIndex++; showSlide(slideIndex); });
+  document.getElementById('prevArrow').addEventListener('click', () => { slideIndex--; showSlide(slideIndex); });
+</script>
+
+</body>
+</html>
